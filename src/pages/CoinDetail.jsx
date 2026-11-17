@@ -27,7 +27,7 @@ export const CoinDetail = () => {
   const loadCoinData = async () => {
     try {
       const data = await fetchCoinData(id);
-      setCoin(null);
+      setCoin(data);
     } catch (err) {
       console.error("Error fetching crypto: ", err);
     } finally {
